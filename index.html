@@ -1,23 +1,44 @@
 ---
 layout: default
 ---
+<style>
+    .home{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+    .post-list{
+        /*height: 100%;*/
+        /*float: left;*/
+    }
+</style>
 
 <div class="home">
+    <div class="side-bar">
+        <h1 class="page-heading">Posts</h1>
 
-  <h1 class="page-heading">Posts</h1>
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <p>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 
-        <p>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
+    <div class="latest-post">
+        <!-- show latest post using limit:1 -->
+        {% for post in site.posts limit:1 %}
+             {{ post.content }}
+        {% endfor %}
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

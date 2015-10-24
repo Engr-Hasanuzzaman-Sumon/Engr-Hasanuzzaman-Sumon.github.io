@@ -8,7 +8,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: engr.hasanuzzaman
-github_username:  Engr-Hasanuzzaman-Sumon
+github_username: Engr-Hasanuzzaman-Sumon
+excerpt_separator: 'd596aa409dbcf4bf9d9d57252304a921bd02e3fc'
 
 # Build settings
 markdown: kramdown
