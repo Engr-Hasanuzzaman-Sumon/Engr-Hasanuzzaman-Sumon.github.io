@@ -1,32 +1,27 @@
 ---
 layout: default
 ---
-<style>
-    .home{
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-    }
-    .post-list{
-        /*height: 100%;*/
-        /*float: left;*/
-    }
-</style>
+
+<div class="info-box">
+    <p class="beginner">This text color means <strong>beginner</strong>  level post</p>
+    <p class="intermediate">This text color means <strong>intermediate</strong> level post</p>
+    <p class="advance">This text color means <strong>advance</strong> level post</p>
+</div>
 
 <div class="home">
     <div class="side-bar">
         <h1 class="page-heading">Posts</h1>
 
         <ul class="post-list">
-            {% for post in site.posts %}
-            <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <p>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </p>
+            {% for category in site.categories %}
+            <li><a name="{{ category | first }}">{{ category | first }}</a>
+                <ul>
+                    {% for posts in category %}
+                    {% for post in posts %}
+                    <li class="{{ post.subcategory }}"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
             </li>
             {% endfor %}
         </ul>
