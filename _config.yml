@@ -4,11 +4,11 @@ email: hasanuzzaman.sumon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
    I am professional web developer and this is my personal blog. I am going to post small blog about 
    various web development related topics in here and most of them will be in Bengali.
-   My topics inclueds Ruby, Ruby on Rails, html, css, Javascript, jquery, git etc.
+   My topics inclueds Ruby, Ruby on Rails, Java, C#, html, css, Javascript, jquery, git etc.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: engr.hasanuzzaman
-github_username: Engr-Hasanuzzaman-Sumon
+github_username: engr-hasanuzzaman
 excerpt_separator: 'd596aa409dbcf4bf9d9d57252304a921bd02e3fc'
 
 # Build settings
