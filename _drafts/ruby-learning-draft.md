@@ -30,3 +30,20 @@ categories: ruby beginner
     my_other_object.get_my_variable = "Hello" # => NoMethodError
 
     {% endhighlight %}
+    
+    <h4>Some rails quick info that will help you to think in new way</h4>
+    <ol>
+  <li>
+        request.format return request format like :html, :json,...
+        we can use this like 
+        if request.format.symbol == :html
+           .....
+        else
+            ......
+        end    
+  </li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
