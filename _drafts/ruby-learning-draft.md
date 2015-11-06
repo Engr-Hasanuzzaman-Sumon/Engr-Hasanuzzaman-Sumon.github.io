@@ -47,3 +47,10 @@ categories: ruby beginner
   <li></li>
   <li></li>
 </ol>
+3. foo = true and false #foo is true beacuse for assign = prioritty is greater then and 
+
+4. every ruby block and statement return value even class
+var = class Foo
+  4
+end
+For above code the value of vae is 4 beacuse class declaretion return 4
