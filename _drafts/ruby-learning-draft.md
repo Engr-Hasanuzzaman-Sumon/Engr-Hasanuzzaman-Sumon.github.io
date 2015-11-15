@@ -79,4 +79,6 @@ role of self.
 • Instance variables are always assumed to be instance variables of
 self.
 • Any method called without an explicit receiver is assumed to be a
-method of self.
+method of self. 
+
+6. Ruby example intrview question with answer   https://github.com/gregstallings/ruby-trivia
