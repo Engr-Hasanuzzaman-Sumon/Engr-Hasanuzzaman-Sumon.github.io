@@ -29,4 +29,26 @@ subcategory: beginner
             git branch -r
         </code>
     </li>
+    <li>
+        Remove/delete git branch from remote.
+        
+        You can also use the following to delete the remote branch.
+
+        git push --delete origin serverfix
+        Which does the same thing as
+        
+        git push origin :serverfix
+        but it may be easier to remember.
+    </li>
+    <li>
+        Remove/delete git branch from local:
+        
+        You can also use the following to delete the local branch.
+
+        <code>git branch -d branch_name</code>
+        
+        or for force delete
+        
+        <code>git branch -D branch_name</code>
+    </li>
 </ul>
