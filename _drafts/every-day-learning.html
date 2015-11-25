@@ -1,1 +1,23 @@
 
+---
+layout: post
+title:  "Every day learing"
+date:   2015-10-24 2:44:00
+categories: general
+---
+<b>Ghost Methods</b>
+<p>
+  From the caller’s side, a message that’s processed by method_missing looks like
+a regular call—but on the receiver’s side, it has no corresponding method.
+This trick is called a Ghost Method.
+</p>
+<b>Dynamic Proxies</b>
+<p>
+  When an object(wrapper object that contain other object) receive ghost method call and simply use that call to
+  get data from contained object is called Dynamic Proxies.
+</p>
+
+<P>
+  Every time we override method_missing(for use ghost method) we should also override respond_to_missing?
+  Because ghost method call on respond_to? will not respond.
+</P>
