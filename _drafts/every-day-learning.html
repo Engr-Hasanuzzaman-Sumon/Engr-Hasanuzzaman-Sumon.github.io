@@ -21,3 +21,10 @@ This trick is called a Ghost Method.
   Every time we override method_missing(for use ghost method) we should also override respond_to_missing?
   Because ghost method call on respond_to? will not respond.
 </P>
+<b>module const_missing method</b>
+<p>
+  When you reference a constant that doesn’t exist, Ruby passes the name of
+the constant to const_missing as a symbol. Class names are just constants
+</p>
+<p>N.B: When we use ghost method need to extra carefull because it may cause infinity call</p>
+
