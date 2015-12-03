@@ -34,4 +34,12 @@ behind and opens a new one:
   <li>Class definitions</li>
 </ul>
 <p>Ruby class is not special thing it just give us new scope</p>
+<b>Solve Rubymine keyboard freez problem</b>
+Keyboard input may be unlocked by restarting IBus daemon from a console:
+
+<code>ibus-daemon -rd</code>
+IBus can be disabled for IDEA by unsetting env. variable XMODIFIERS, but ability to input national characters in IDEA will be lost:
+
+<code>XMODIFIERS="" idea.sh</code>
+I have used the second one and fixed my problem.
 
