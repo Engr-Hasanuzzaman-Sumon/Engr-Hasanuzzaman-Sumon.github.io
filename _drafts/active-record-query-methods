@@ -1,0 +1,4 @@
+user = User.find(123)
+user = User.find(123)
+user = User.first
+user = User.last
