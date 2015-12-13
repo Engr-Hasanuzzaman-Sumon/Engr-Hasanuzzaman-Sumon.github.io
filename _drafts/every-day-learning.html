@@ -50,4 +50,30 @@ self indicate obje then it object's instance variable.</p>
 variable is accessabe using dot(.) operator outside of class}So, to access variable we have to declare getter/setter method
 in ruby.(There are many way to access variable in ruby like instace_variable_get, instacnce_eval, eval</p>
 <p>We can make flat scope for sharing local variable between two or more methods</p>
+<ul>Different way make flat scope in ruby
+<li>
+  user <code>var = 1, obj.instance_exec(var) {|var| var }</code> where we pass var local's to boj scope
+</li>
+<li>
+  <code>Class.new(var)/Module.new(var)</code>passing var to class & module scope.
+</li>
+<li>
+  
+</li>
+</ul>
+<p>Example of flat scope
+  <code>my_var = "Success"
+ 
+MyClass = Class.new do
+    "#{my_var} in the class definition"
+ 
+    # Have to use dynamic method creation to access my_var
+    define_method :my_method do
+        "#{my_var} in the method"
+    end
+end
+ 
+puts MyClass.new.my_method
+ 
+# => Success in the method</code></p>
 
