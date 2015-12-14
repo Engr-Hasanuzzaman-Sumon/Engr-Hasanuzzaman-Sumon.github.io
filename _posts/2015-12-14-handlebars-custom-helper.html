@@ -7,6 +7,7 @@ subcategory: intermediate
 ---
 <h2> add custom helper to handlebar template and use them</h2>
 Add helper:
+</br>
 <code>
 Handlebars.registerHelper ('truncate', function (str, len) {
         if (str && str.length > len && str.length > 0) {
@@ -20,6 +21,8 @@ Handlebars.registerHelper ('truncate', function (str, len) {
         return str;
     });
     </code>
+    </br>
   Use helper:
+  </br>
   <code>{{truncate body}}</code>
     
