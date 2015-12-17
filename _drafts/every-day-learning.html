@@ -77,3 +77,56 @@ puts MyClass.new.my_method
  
 # => Success in the method</code></p>
 
+
+
+<p><h2>Difference between undef_method and remove_method in ruby</h2></p>
+You can remove a method in two easy ways. The drastic
+
+Module#undef_method( ) 
+removes all methods, including the inherited ones. The kinder
+
+Module#remove_method( ) 
+removes the method from the receiver, but it leaves inherited methods alone.
+
+See below 2 simple example -
+
+Example 1 using undef_method
+
+class A 
+    def x
+        puts "x from A class"
+    end
+end
+
+class B < A
+    def x
+        puts "x from B Class"
+    end
+    undef_method :x
+end
+
+obj = B.new
+obj.x
+result - main.rb:15:in 
+': undefined methodx' for # (NoMethodError)
+
+Example 2 using remove_method
+
+class A 
+    def x
+        puts "x from A class"
+    end
+end
+
+class B < A
+    def x
+        puts "x from B Class"
+    end
+    remove_method :x
+end
+
+obj = B.new
+obj.x
+Result - $ruby main.rb
+
+x from A class
