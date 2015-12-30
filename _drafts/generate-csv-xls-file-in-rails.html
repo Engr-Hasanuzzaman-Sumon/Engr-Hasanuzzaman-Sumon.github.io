@@ -1,1 +1,35 @@
 
+1. Ad mime type to initializer/mime_type.rb file 
+    EX. <code>Mime::Type.register 'application/xls', :xls</code> for xls file
+  
+2. Add following code to corresponding controller respectively for csv and xls format.
+
+  <code>
+    format.csv do
+        #  Don't Try to Put Headers into single line, it wont work
+        # header info. Use your custom filename 
+        headers['Content-Disposition'] = "attachment; filename=\"campaigns_list_brand_#{Time.now.strftime('%Y%m%d_%H_%M_%S')}.csv\""
+        #content type declaretion. It is only difference btw xls file
+        headers['Content-Type'] ||= 'text/csv'
+        # rendered view which has extention <code>.csv.rb</code> like for this example <code>export_brand_campaigns.csv.rb</code> 
+        render 'campaigns/export_brand_campaigns'
+      end
+
+      format.xls do
+        # all thing like csv format
+        headers['Content-Disposition'] = "attachment; filename=\"campaigns_list_influencer_#{Time.now.strftime('%Y%m%d_%H_%M_%S')}.xls\""
+        render 'campaigns/export_influencer_campaigns'
+      end
+  </code>
+  
+  3. view code 
+    <code>
+          <%- headers = ['Campaign Name', 'Post Likes', 'Reach', 'Comments', 'Shares', 'Campaign Starts', 'Campaign Ends'] -%>
+          <%= CSV.generate_line headers %>
+          <% @campaigns.each do |campaign| %>
+              <%= CSV.generate_line([campaign.name, campaign.number_of_likes, campaign.number_of_post_reach, campaign.number_of_comments, campaign.number_of_shares, campaign.start_date, campaign.end_date.present? ? campaign.end_date : 'NA']).html_safe.strip %>
+          <% end %>
+    </code>
+    
+    Actually <code>CSV.generate_line</code> which generage line with given data. <code>.html_safe and .strip</code>
+    are corresponding for html safe and remove white space.    
