@@ -12,11 +12,25 @@ subcategory: intermediate
     <code>
     my_lambda = -> { puts 'Hello' }
  
-    <ol></ol>my_lambda.call</ol>
+    <ol>my_lambda.call</ol>
     <ol>my_lambda[]</ol>
     <ol>my_lambda.()</ol>
     <ol>my_lambda.===</ol>
     </code>
   </li>
+  
+  <li>
+    <h3>Creating a pre-filled array</h3>
+    <p>The Array class can take an argument + a block, which let’s you create an array with n elements.
+    By default these elements are nil, but if you have a block, the values will come from it.</p>
+
+Example:
+    <code>
+    Array.new(10) { rand 300 }
+    </code>
+    <p>This will generate an array with 10 random numbers which are between 0 and 300.</p>
+  </li>
 
 </ul>
+
+http://www.blackbytes.info/2016/01/ruby-tricks/
