@@ -1,21 +1,25 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: My personal blog
+title: My pesonal blog # ex. I m Chuan
+name: hasanuzzaman sumon # ex. DONGChuan
 email: hasanuzzaman.sumon@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-   I am professional web developer and this is my personal blog. I am going to post small blog about
-   various web development related topics in here and most of them will be in Bengali.
-   My topics inclueds Ruby, Ruby on Rails, Java, C#, html, css, Javascript, jquery, git etc.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://engr-hasanuzzaman.github.io/" # the base hostname & protocol for your site
-twitter_username: engr.hasanuzzaman
-github_username: engr-hasanuzzaman
-excerpt_separator: 'd596aa409dbcf4bf9d9d57252304a921bd02e3fc'
-
-# Build settings
-markdown: kramdown
-exclude:
-
+location: My location # ex. Nice, France
+company: MyCompany
+company_url: my_company_website
+github_url: https://github.com/engr-hasanuzzaman # ex. https://github.com/DONGChuan
+description: My pesonal blog where I put my learning
 favicon: favicon.png # Image must be in assets/images
+
+# The base hostname & protocol for your site
+# For local test, please use http://localhost:4000
+# For production, use your github page url. ex. http://dongchuan.github.io
+url: http://engr-hasanuzzaman.github.io/
 
 ## Gem
 gems:
@@ -27,8 +31,6 @@ gems:
 
 # Build settings
 markdown: kramdown
-exclude:
-    - node_modules
 highlighter: rouge
 lsi:         false
 excerpt_separator: "\n\n"
@@ -44,7 +46,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: https://engr-hasanuzzaman-github-io.disqus.com # ex. httpdongchuangithubio.disqus.com
+disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
 # Pagination
 paginate: 10
@@ -83,13 +85,7 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_software_engieering: [Object Oriented Principle, Design Pattern]
-skill_programming_language: [Ruby, JavaScript, Java, c#, SQL]
-skill_web_frameworks: [Ruby on Rails, ASP.NET MVC 4, Bootstrap]
-skill_web_testing_frameworks: [Rspec, Capybara, Factory Girl]
-skill_version_control: [Git]
-skill_templating_engie: [haml, erb, Razor, Handlebars.js]
-skill_databases: [Mysql, PostgreSQL, MongoDB, Redis]
-skill_project_management_tools: [Pivotal Tracker, Trello, Basecamp]
-skill_web_keywords: [HTML, CSS, JQuery, Ajax, AngularJS, Boostrap]
-skill_mobile_app_keywords: [Android]
+skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
+skill_mobile_app_keywords: [Android, Sketch UI Desgin]

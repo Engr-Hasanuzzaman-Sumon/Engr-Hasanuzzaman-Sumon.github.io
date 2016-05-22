@@ -14,13 +14,10 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
