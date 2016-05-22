@@ -9,17 +9,17 @@
 title: My pesonal blog # ex. I m Chuan
 name: hasanuzzaman sumon # ex. DONGChuan
 email: hasanuzzaman.sumon@gmail.com
-location: My location # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
+location: Dhaka, Bangladesh # ex. Nice, France
+company:  # MyCompany
+company_url:  # my_company_website
 github_url: https://github.com/engr-hasanuzzaman # ex. https://github.com/DONGChuan
 description: My pesonal blog where I put my learning
-favicon: favicon.png # Image must be in assets/images
+favicon: favicon.ico # Image must be in assets/images
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
 # For production, use your github page url. ex. http://dongchuan.github.io
-url: http://engr-hasanuzzaman.github.io/
+url: http://localhost:4000 #http://engr-hasanuzzaman.github.io/
 
 ## Gem
 gems:
@@ -85,7 +85,9 @@ analytics :
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
+skill_programming_languages: [Ruby, Java, JavaScript]
+skill_web_frameworks: [Ruby on Rails, ASP.NET MVC 4, Bootstrap]
+skill_databases: [MySQL, Postgre SQL, SQLite, Mongodb, Redish]
+skill_software_keywords: [Object oriented principles, Design Patterns, TDD, Agile]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, MongoDB, Redis, Boostrap]
+skill_mobile_app_keywords: [Android]

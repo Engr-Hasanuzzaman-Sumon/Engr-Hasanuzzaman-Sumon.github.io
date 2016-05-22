@@ -1,0 +1,70 @@
+http://www.creativebloq.com/css3/create-modular-and-scalable-css-9134351
+Four popular methods for writing modular HTML and CSS.
+<ol>
+  <li>
+    Object Oriented CSS (OOCSS)
+  </li>
+  <li>
+    <h2>Scalable and Modular Architecture for CSS (SMACSS)</h2>
+    <p>
+      The five categories it defines are: Base, Layout, Module, State and Theme.
+    </p>
+    <ul>
+      <li>
+        <h3>Base</h3>
+        <p>
+          Base rules are applied directly to element selectors, descendant selectors and pseudo selectors.
+          These wouldn’t be applied to classes or IDs as they’re default CSS rules. Resets are a good example.
+        </p>
+      </li>
+      <li>
+        <h3>Layout</h3>
+        <p>
+          Layout rules are for the major components of a site like the header, footer, sidebar, or main- content.
+          These will often have CSS applied to an ID like #sidebar or #header. Classes can also be used.
+        </p>
+      </li>
+      <li>
+        <h3>Modules</h3>
+        <p>
+          Minor layout components are considered as modules and typically live inside the major layout components.
+          A content box inside a sidebar is an example. Sometimes it’s hard to tell the difference between major and minor components.
+          The more a component is repeated, the more likely it’s a module. Navigation bars and widgets are good examples of modules.
+          Here, we want to stick to classes.
+        </p>
+      </li>
+      <li>
+        <h3>State</h3>
+        <p>
+          State rules apply to changes like hovering over a navigation item or collapsing and expanding an accordion menu.
+          State rules are similar to modules, but differ in several ways.
+          They can apply to both layout and module styles and often indicate a JavaScript dependency.
+          More importantly, they apply to changes that occur after the page is rendered. Like modules,
+          they should be developed to stand alone with styles being inside a single class selector.
+        </p>
+      </li>
+      <li>
+        <h3>Theme</h3>
+        <p>
+          Theme rules are typically used least on a single project and aren’t considered one of the core categories.
+          These define things like colour and typography, and exist so user preferences can overwrite any of the above rules.
+        </p>
+      </li>
+
+    </ul>
+    <p>Another important concept to SMACSS is its naming convention. As Snook mentions, “a naming convention is beneficial for immediately understanding which category a particular style belongs to and its role within the overall scope of the page.”
+
+The following convention is suggested for each of the four core categories:
+
+Base Nothing needed
+Layout l- or layout- prefix
+State is- prefix, as in is-active or is-hidden. When
+applied to a module, you should include the
+module name as in .is-tab-active
+Module Modules just use module name (.box)
+instead of trying to prefix each. However, related modules (submodules) receive a consistent prefix to help organise them (.box-border, .box-background, etc)</p>
+  </li>
+  <li>Don’t Repeat Yourself CSS (DRY CSS)</li>
+  <li> Block, Element, Modifier (BEM)</li>
+  
+</ol>

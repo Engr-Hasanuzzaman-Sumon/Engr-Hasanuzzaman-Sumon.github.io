@@ -1,0 +1,137 @@
+
+---
+layout: post
+title:  "Every day learing"
+date:   2016-01-14
+categories: learning
+---
+
+
+<b>Ghost Methods</b>
+<p>
+  From the caller’s side, a message that’s processed by method_missing looks like
+a regular call—but on the receiver’s side, it has no corresponding method.
+This trick is called a Ghost Method.
+</p>
+<b>Dynamic Proxies</b>
+<p>
+  When an object(wrapper object that contain other object) receive ghost method call and simply use that call to
+  get data from contained object is called Dynamic Proxies.
+</p>
+
+<P>
+  Every time we override method_missing(for use ghost method) we should also override respond_to_missing?
+  Because ghost method call on respond_to? will not respond.
+</P>
+<b>module const_missing method</b>
+<p>
+  When you reference a constant that doesn’t exist, Ruby passes the name of
+the constant to const_missing as a symbol. Class names are just constants
+</p>
+<p>N.B: When we use ghost method need to extra carefull because it may cause infinity call</p>
+<ul>There are exactly three places where a program leaves the previous scope
+behind and opens a new one:
+  <li>Class definitions</li>
+  <li>Class definitions</li>
+  <li>Class definitions</li>
+</ul>
+<p>Ruby class is not special thing it just give us new scope</p>
+<b>Solve Rubymine keyboard freez problem</b>
+Keyboard input may be unlocked by restarting IBus daemon from a console:
+
+<code>ibus-daemon -rd</code>
+IBus can be disabled for IDEA by unsetting env. variable XMODIFIERS, but ability to input national characters in IDEA will be lost:
+
+<code>XMODIFIERS="" idea.sh</code>
+I have used the second one and fixed my problem.
+
+<p>@indicate inctace objecct of self. If during declaretoin of @var self is class then it class es instace objeect, if 
+self indicate obje then it object's instance variable.</p>
+
+<p>Like other programming language, ruby instance variable is not open to out side world(class).{In java public inctance 
+variable is accessabe using dot(.) operator outside of class}So, to access variable we have to declare getter/setter method
+in ruby.(There are many way to access variable in ruby like instace_variable_get, instacnce_eval, eval</p>
+<p>We can make flat scope for sharing local variable between two or more methods</p>
+<ul>Different way make flat scope in ruby
+<li>
+  user <code>var = 1, obj.instance_exec(var) {|var| var }</code> where we pass var local's to boj scope
+</li>
+<li>
+  <code>Class.new(var)/Module.new(var)</code>passing var to class & module scope.
+</li>
+<li>
+  
+</li>
+</ul>
+<p>Example of flat scope
+  <code>my_var = "Success"
+ 
+MyClass = Class.new do
+    "#{my_var} in the class definition"
+ 
+    # Have to use dynamic method creation to access my_var
+    define_method :my_method do
+        "#{my_var} in the method"
+    end
+end
+ 
+puts MyClass.new.my_method
+ 
+# => Success in the method</code></p>
+
+
+
+<p><h2>Difference between undef_method and remove_method in ruby</h2></p>
+You can remove a method in two easy ways. The drastic
+
+Module#undef_method( ) 
+removes all methods, including the inherited ones. The kinder
+
+Module#remove_method( ) 
+removes the method from the receiver, but it leaves inherited methods alone.
+
+See below 2 simple example -
+
+Example 1 using undef_method
+
+class A 
+    def x
+        puts "x from A class"
+    end
+end
+
+class B < A
+    def x
+        puts "x from B Class"
+    end
+    undef_method :x
+end
+
+obj = B.new
+obj.x
+result - main.rb:15:in 
+': undefined methodx' for # (NoMethodError)
+
+Example 2 using remove_method
+
+class A 
+    def x
+        puts "x from A class"
+    end
+end
+
+class B < A
+    def x
+        puts "x from B Class"
+    end
+    remove_method :x
+end
+
+obj = B.new
+obj.x
+Result - $ruby main.rb
+
+x from A class
+<h3> Issues using div with in `a` tag</h3>
+<p>Normally div with in a tag is not allowed. If we need apply display: display on a tag. Again we are not able to use
+a tag with in a tag. </p>

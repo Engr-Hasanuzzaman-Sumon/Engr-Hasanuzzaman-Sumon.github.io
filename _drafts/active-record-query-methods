@@ -1,0 +1,163 @@
+Finding a single record
+Probably the most common Active Record query method you will see will be the find method:
+
+?
+1
+user = User.find(123)
+This will find the user in the database with an id of 123.
+
+You can also pass an array to this method in order to find multiple records in one go:
+
+?
+1
+users = User.find([4,5,6])
+Finding the First or Last records
+If you want to find the first record you can use the first method:
+
+?
+1
+user = User.first
+Similarly, if you want to find the last record you can use the last method:
+
+?
+1
+user = User.last
+Both of these methods also take an argument to return N records. For example, to get the first 10 records, you could use:
+
+?
+1
+user = User.first(10)
+And to get the last 10 records you could use:
+
+?
+1
+user = User.last(10)
+Declaring Conditions
+Another common operation is to define WHERE clauses to find records that satisfy certain conditions.
+
+We can use the where method to add conditions to the query:
+
+?
+1
+articles = Article.where(published: true)
+Here I’m selecting all of the articles that are set to published.
+
+You can also pass an array to the conditions hash to perform a WHERE IN query:
+
+?
+1
+articles = Article.where(status: ["publish", "draft"])
+To perform a WHERE NOT query, you can use the following syntax:
+
+?
+1
+articles = Article.where.not(published: true)
+Ordering
+You can specify an order in which you want the records to be returned by using the order method:
+
+?
+1
+articles = Article.order(published_at: :desc)
+In this example I’m passing a hash (Working with Hashes in Ruby) of the column to order by and a symbol (What are Symbols in Ruby?) for the direction. If you wanted to order the articles in the opposite direction you could use the :asc symbol.
+
+You can also order by multiple fields by passing multiple values:
+
+?
+1
+articles = Article.order(title: :asc, published_at: :desc)
+Limit and Offset
+Once you start to have a lot of records in your database you will want to start limiting the results that are returned on each request.
+
+To limit the returned results you can use the limit method:
+
+?
+1
+articles = Article.limit(10)
+The code above will return the first 10 articles.
+
+When working with pagination you will want to use limit in conjunction with offset to select a specific set of records:
+
+?
+1
+articles = Article.limit(10).offset(10)
+The above code will return 10 records starting at the 11th record.
+
+Aggregates
+A common mistake of newbie developers is trying to do calculations in Ruby that would be much better suited to be run in the database.
+
+For example, if you need to count all of the records of a table, it’s much easier to push that to the database, rather than loading each record as an Active Record object, then counting the number of objects.
+
+To count the number of records, you can use the count method:
+
+?
+1
+Article.count
+You can also call the count method after adding a WHERE clause:
+
+?
+1
+article.where(published: true).count
+As you would probably expect, you can also perform other aggregate queries in much the same way:
+
+?
+1
+2
+3
+4
+5
+6
+7
+article.average(:rating)
+ 
+article.minimum(:rating)
+ 
+article.maximum(:rating)
+ 
+article.sum(:rating)
+Exists
+Another common type of query is checking whether a record exists. Again we can perform this query in the database and simply return a boolean value, rather than having the overhead of hydrating the Active Record object:
+
+?
+1
+Article.where(slug: "hello-world").exists?
+This will return true if an article exists with a slug of “hello-world”.
+
+Alternatively you can pass the arguments to the method itself:
+
+?
+1
+Article.exists?(slug: "hello-world")
+Associations
+One of the best things about using Active Record for querying is that it will make it a lot easier to query associations. We looked at using Active Record Associations in Understanding Active Record Associations.
+
+To perform an INNER JOIN query you can use the joins method:
+
+?
+1
+Article.joins(:users)
+Another common issue with querying associations is the “N + 1 Problem”. This is where you lazily load the required data causing N + 1 queries. For example, if you wanted to load 100 posts and their comments, you would end up performing 101 queries.
+
+To prevent this issue and instead load the data in 2 queries, we can use Active Record’s eager loading:
+
+?
+1
+articles = Article.includes(:comments)
+Now when you access the comments on each Article object, the comments will already be loaded and thus will prevent any further queries from being performed.
+
+Scopes
+If your application requires that you add common clauses to a lot of your queries you can define a scope on the Active Record model to reduce this duplication:
+
+?
+1
+2
+3
+class Article < ActiveRecord::Base
+  scope :published, -> { where(published: true) }
+end
+Here we have defined a published scope to only return articles that have been marked as published.
+
+Now you can use the published method on the model to use this scope:
+
+?
+1
+articles = Article.published
