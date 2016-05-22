@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
    various web development related topics in here and most of them will be in Bengali.
    My topics inclueds Ruby, Ruby on Rails, Java, C#, html, css, Javascript, jquery, git etc.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://engr-hasanuzzaman.github.io/" # the base hostname & protocol for your site
 twitter_username: engr.hasanuzzaman
 github_username: engr-hasanuzzaman
 excerpt_separator: 'd596aa409dbcf4bf9d9d57252304a921bd02e3fc'
@@ -16,11 +16,6 @@ markdown: kramdown
 exclude:
 
 favicon: favicon.png # Image must be in assets/images
-
-# The base hostname & protocol for your site
-# For local test, please use http://localhost:4000
-# For production, use your github page url. ex. http://dongchuan.github.io
-url: http://localhost:4444
 
 ## Gem
 gems:
