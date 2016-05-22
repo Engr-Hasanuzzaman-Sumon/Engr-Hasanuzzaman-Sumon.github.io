@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "কিভাবে আমরা Software Enginner হতে পারব "
+title:  "কিভাবে আমরা Software Developer হতে পারব "
 date:   2015-09-09 09:44:00
 categories: learning
 subcategory: beginner
