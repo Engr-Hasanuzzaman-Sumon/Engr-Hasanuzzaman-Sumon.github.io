@@ -1,9 +1,19 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+menu: about
+subtitle:   <h3>Download My CV</h3>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-bl"></span> Français
+            </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-gb"></span> English
+            </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="/assets/files/CV_Chuan_Dong_FR.pdf" target="_blanks">
+                <span class="flag-icon flag-icon-cn"></span> 中文
+            </a>
+                            
+css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
 ---
 
-I am professional web developer and this is my personal blog. I am going to post small blog about 
-various web development related topics in here and most of them will be in Bengali.
-My topics inclueds Ruby, Ruby on Rails, Java, C#, Python, html, css, Javascript, jquery, git etc.
+{% include about.html %}

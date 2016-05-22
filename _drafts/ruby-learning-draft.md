@@ -7,7 +7,6 @@ categories: ruby beginner
 
 1. Using ruby metaprogramming always we can add instance variable & method to specific object.
 
-    {% highlight ruby linenos%}
     # Example 2: create a new instance of class Object
     my_object = Object.new
 
@@ -29,8 +28,7 @@ categories: ruby beginner
 
     my_other_object.get_my_variable = "Hello" # => NoMethodError
 
-    {% endhighlight %}
-    
+
     <h4>Some rails quick info that will help you to think in new way</h4>
     <ol>
   <li>

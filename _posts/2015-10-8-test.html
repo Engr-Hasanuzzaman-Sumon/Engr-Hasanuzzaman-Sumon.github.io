@@ -10,7 +10,7 @@ subcategory: beginner
         In Ruby if you use symbolize key to keep data to hash you also have to use symbolize key to access and this
         is true for string.
         
-        {% highlight ruby %}
+
             foo = {}
             foo[:key1] = 'symbolize key1'
             foo['key2'] = 'string key2'
@@ -22,8 +22,8 @@ subcategory: beginner
             p foo[:key2] # nil because there is no key named :key2 ('key2' == :key2 return false)
 
             # but in rails we can access
-        {% endhighlight %}
-        
+
+
         But in rails we can use symbol and string alternatively for hash key because it use <a href="http://apidock.com/rails/ActiveSupport/HashWithIndifferentAccess">HashWithIndifferentAccess</a>
         instead ruby hash where internally all key converted to string.
 

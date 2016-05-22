@@ -2,7 +2,7 @@
 title: My personal blog
 email: hasanuzzaman.sumon@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-   I am professional web developer and this is my personal blog. I am going to post small blog about 
+   I am professional web developer and this is my personal blog. I am going to post small blog about
    various web development related topics in here and most of them will be in Bengali.
    My topics inclueds Ruby, Ruby on Rails, Java, C#, html, css, Javascript, jquery, git etc.
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -14,4 +14,87 @@ excerpt_separator: 'd596aa409dbcf4bf9d9d57252304a921bd02e3fc'
 # Build settings
 markdown: kramdown
 exclude:
+
+favicon: favicon.png # Image must be in assets/images
+
+# The base hostname & protocol for your site
+# For local test, please use http://localhost:4000
+# For production, use your github page url. ex. http://dongchuan.github.io
+url: http://localhost:4444
+
+## Gem
+gems:
+  - jekyll-paginate
+  - jekyll-geo-pattern
+  - rouge
+  - kramdown
+  - jekyll-github-metadata
+
+# Build settings
+markdown: kramdown
+exclude:
     - node_modules
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+
+source:      .
+destination: ./_site
+
+quiet:    false
+defaults: []
+
+kramdown:
+  input: GFM
+  enable_coderay: true
+
+# Disque
+disque: https://engr-hasanuzzaman-github-io.disqus.com # ex. httpdongchuangithubio.disqus.com
+
+# Pagination
+paginate: 10
+paginate_path: 'page:num'
+
+# Navigation. If you do not like these modules, just remove them :D
+navs:
+  -
+    href: /
+    label: Home
+
+  -
+    href: /open-source
+    label: Open-Source
+
+  -
+    href: /blog
+    label: Blog
+
+  -
+    href: /bookmark
+    label: Bookmark
+
+  -
+    href: /about
+    label: About
+
+# Sidebar to show popular repo
+side_bar_repo_limit: 5 # Number of repos to show
+
+# Google Analytics
+analytics :
+  provider : google
+  google :
+      tracking_id : 'tracking_id'  # ex. UA-72165600-X
+
+
+# For about.html. Fell free to create your own!
+skill_software_engieering: [Object Oriented Principle, Design Pattern]
+skill_programming_language: [Ruby, JavaScript, Java, c#, SQL]
+skill_web_frameworks: [Ruby on Rails, ASP.NET MVC 4, Bootstrap]
+skill_web_testing_frameworks: [Rspec, Capybara, Factory Girl]
+skill_version_control: [Git]
+skill_templating_engie: [haml, erb, Razor, Handlebars.js]
+skill_databases: [Mysql, PostgreSQL, MongoDB, Redis]
+skill_project_management_tools: [Pivotal Tracker, Trello, Basecamp]
+skill_web_keywords: [HTML, CSS, JQuery, Ajax, AngularJS, Boostrap]
+skill_mobile_app_keywords: [Android]

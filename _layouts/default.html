@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+      {% include header.html %}
+      <div class="content">
+          {{ content }}
       </div>
-    </div>
-
-    {% include footer.html %}
-
-    <script src="/js/jquery-2.1.4.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/site.js"></script>
-    <script id="dsq-count-scr" src="//engr-hasanuzzaman-github-io.disqus.com/count.js" async></script>
+      {% include footer.html %}
+      <script id="dsq-count-scr" src="//engr-hasanuzzaman-github-io.disqus.com/count.js" async></script>
   </body>
-
 </html>

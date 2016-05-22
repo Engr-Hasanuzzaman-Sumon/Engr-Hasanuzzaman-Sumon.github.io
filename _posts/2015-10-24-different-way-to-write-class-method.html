@@ -9,7 +9,7 @@ subcategory: intermediate
 <p>There are many ways to declare class method in ruby.</p>
 <ol>
     <li> <p>Most common way of declare class method is:</p>
-{% highlight ruby linenos%}
+
 # approach 1
 class Foo
     def self.capitalize_name
@@ -18,11 +18,11 @@ class Foo
 end
 
 print MyClass.capitalize_name # => My captalize name is Foo
-{% endhighlight %}
+
     </li>
     <li>
         <p>In this method we use class name instead of self:</p>
-        {% highlight ruby linenos%}
+
         # approach 2
         class Foo
           def Foo.capitalize_name
@@ -31,11 +31,11 @@ print MyClass.capitalize_name # => My captalize name is Foo
         end
 
         print MyClass.capitalize_name # => My captalize name is Foo
-        {% endhighlight %}
+
     </li>
     <li>
         <p>First declare class without method, then add method:</p>
-        {% highlight ruby linenos%}
+
         # approach 3
         class Foo;end
         # defining a class method out with the class definition
@@ -44,11 +44,11 @@ print MyClass.capitalize_name # => My captalize name is Foo
         end
 
         print MyClass.capitalize_name # => My captalize name is Foo
-        {% endhighlight %}
+
     </li>
     <li>
         <p>First declare class without method, then add method:</p>
-        {% highlight ruby linenos%}
+
         # approach 4
         # define a new class named MyClass
         # here we can see that our declare class just object of Class
@@ -59,6 +59,6 @@ print MyClass.capitalize_name # => My captalize name is Foo
         end
 
         print MyClass.capitalize_name # => My captalize name is Foo
-        {% endhighlight %}
+
     </li>
 </ol>

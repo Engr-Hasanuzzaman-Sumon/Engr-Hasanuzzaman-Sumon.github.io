@@ -9,7 +9,7 @@ subcategory: intermediate
 <ol>
     <li>
         <p>Store method in variable( Ruby functional programming properties) using <code>method</code></p>
-        {% highlight ruby %}
+
             #If you want to store a method rather than the result of calling a method
             #or just the message you'd send to invoke it, you need to use the method method on the owning object.
             #So for example
@@ -20,11 +20,11 @@ subcategory: intermediate
 
             helloplus = "hello".method(:+)
             helloplus.call " world" # => "hello world"
-        {% endhighlight %}
+
     </li>
     <li>
         <p>In ruby every statement and block of code return some value even  <code>class</code></p>
-        {% highlight ruby %}
+
         a = class A
         def initialize
         @a = 11
@@ -42,7 +42,7 @@ subcategory: intermediate
         A.new.instance_variable_get(:@a) # => 11
         A.class_variable_get(:@@a) # => 22
         A.new.method(:initialize).call # => 33 , basically we tricked Ruby into calling init
-        {% endhighlight %}
+
     </li>
 
 </ol>
