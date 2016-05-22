@@ -23,7 +23,7 @@ Example:
     `Array.new(10) { rand 300 }`This will generate an array with 10 random numbers which are between 0 and 300.</p>
 
 ## Convert any value into a boolean
-{% highlight ruby linenos%}
+{% highlight ruby linenos %}
 !!(1)   # true
 !!(nil) # false
 {% endhighlight %}
