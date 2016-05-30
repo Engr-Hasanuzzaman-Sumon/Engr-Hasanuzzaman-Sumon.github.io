@@ -55,6 +55,49 @@ this will show commit message
 * `git show --stat`
 this also show last git commit with change file list
 
+# squashing
+`squash` means combine couple of commits. Let you commit 5 commits to implement a feature but some of the commit
+was only for `typo`. If you are thinking that all your code should be in one commit. Using  `squash` you can do it.
+
+Let your feature branch name is 'foo-feature' and your base branch name is 'master'
+
+```css
+$ git log --oneline origin/master..foo-feature
+73bbc09 add migratio
+f33b240 do somthimg
+f33b301 solve type mistake
+```
+
+Above command will show your all commits that you had made for implementing `foo-feature` feature.
+
+`git rebase -i origin/master`
+
+This will open your editor with these contents:
+```css
+73bbc09 add migratio
+f33b240 do somthimg
+f33b301 solve type mistake
+
+# Rebase e54a9a9..73bbc09 onto e54a9a9
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+# ...
+```
+
+Change the pick to squash (or just s) (those commits that you want to squash, at-least leave top commit), save the file and exit. You'll then get another editor with a commit message to edit:
+
+```css
+# This is a combination of 3 commits.
+# The first commit's message is:
+```
+Create your commit message and save. That's it
+
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
