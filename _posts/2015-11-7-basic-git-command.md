@@ -73,6 +73,7 @@ Above command will show your all commits that you had made for implementing `foo
 `git rebase -i origin/master`
 
 This will open your editor with these contents:
+
 ```css
 73bbc09 add migratio
 f33b240 do somthimg
