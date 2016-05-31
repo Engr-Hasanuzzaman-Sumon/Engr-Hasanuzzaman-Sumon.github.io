@@ -97,7 +97,23 @@ Change the pick to squash (or just s) (those commits that you want to squash, at
 # This is a combination of 3 commits.
 # The first commit's message is:
 ```
-Create your commit message and save. That's it
+Create your commit message and save. That's it.
+
+# branch search
+Let you have 40+ branche and most of the time you forget exact branch name. You can search your branc name in different ways
+
+## Using grep
+` git branch | grep foo`
+
+above command will return those branches that contain `foo` word
+
+## Using git wildcard search
+ You can just use `git branch --list <pattern>` where `<pattern>` can contain wildcards:
+`it branch --all --list *Theme*`
+
+The `--all` option will include remote branches in the search.
+
+
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
