@@ -79,7 +79,7 @@ menu: Bookmark
 - [WinSCP](https://winscp.net/eng/download.php) - SFTP, SCP and FTP client for Windows
  
 ## Markdown
-- [Cheet sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers)
+- [Cheet sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers){:target="_blank"}
 
 ## Books
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) - GitHub Practical Tips
