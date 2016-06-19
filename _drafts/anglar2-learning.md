@@ -65,7 +65,52 @@ Like es5, we can declare variable using `var` ex: `var name;` but in typescript 
 similarly for function declaretion `function foo(): string{ }`
 
 ### Interactive typescript 
-You can install 'tsun (typescript updated node)' for playing in typescipt
+You can install 'tsun (TypeScript Upgraded Node)' for playing in typescipt
 `tsun` as `node` package
 install using `npm install -g tsun`
 then use from terminal `tsun`
+
+### `any`
+any is the default type if we omit typing for a given variable. Having a variable of type any allows
+it to receive any kind of value:
+
+```javascript
+var something: any = 'as string';
+something = 1;
+something = [1, 2, 3];
+```
+### constructor
+In TypeScript you can have only one constructor per class. where  `es6` can have more then one constructor as long as `parameters` are different .
+
+### Fat Arrow Functions `=>` 
+When we need to pass function as parameter we have to write 
+```javascript
+array.forEach(function(n){
+	
+});
+```
+using `=>` we can simplified above function as 
+
+```javascript
+array.forEach((n) => {});
+```
+
+There is a diffence btw tow methods.
+- With in first we do not get `this` reference with in parameter `function`
+- With in second we do get `this` reference with in `=>` 
+N.B: Need to read about `js scope`
+
+### Template Strings
+- String interpolation 
+```javascript
+`Hello ${firstName} ${lastName}`;
+```
+- Multiline string 
+```javascript
+var template = `
+<div>
+<h1>Hello</h1>
+<p>This is a great website</p>
+</div>
+`
+```
