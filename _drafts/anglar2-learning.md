@@ -58,3 +58,14 @@ We can keep template on separate folder. To use those template we will use `temp
 ## Decorator
 *Decorator* just `expression` that return something not `statement` that command compiler to do something.
 So, `;` after *decorator* will introduce `ts` error 
+
+## TypeScript
+Type in typescript is optional.
+Like es5, we can declare variable using `var` ex: `var name;` but in typescript we can tell optional type using `:` after variable name like `var name: string;`
+similarly for function declaretion `function foo(): string{ }`
+
+### Interactive typescript 
+You can install 'tsun (typescript updated node)' for playing in typescipt
+`tsun` as `node` package
+install using `npm install -g tsun`
+then use from terminal `tsun`
