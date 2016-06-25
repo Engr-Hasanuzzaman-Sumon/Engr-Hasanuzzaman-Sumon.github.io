@@ -29,6 +29,18 @@ ex:
 	`
 });
 ```
+-componet teach browser new tag
+-An Angular 2 Application is nothing more than a tree of Components.
+-application is top level component which has many child component
+-when parent componetn rendered it recursively render all of it's children
+-The @Component decorator is where you configure your component. Primarily, @Component will
+configure how the outside world will interact with your component.
+-There are two ways to use component selector. let `my-app`
+	* use direcly selector tag with in html like `<my-app></my-app>`
+	* use as attribute with regular `div` <div my-app></div>`
+	
+
+
 ## for loop on collection example
 ```javascript
 <li *ngFor="#item of items">
