@@ -50,6 +50,7 @@ where `items` is the component class properties
 
 ## Use on componetn with in another componet
 If we want to use component `Comp1` with in `main` component we have to configure our component like
+N.B: like angular 1 in angular 2 directives are not defalutly global. That's why we have to pass explicitely. 
 
 ```javascript
 @component({
@@ -57,6 +58,22 @@ If we want to use component `Comp1` with in `main` component we have to configur
 	directives: [Comp1]
 })
 ```
+The [squareBrackets] pass inputs and the (parenthesis) handle outputs.
+Data flows in to your component via input bindings and events flow out of your component through
+output bindings.
+
+### If we want different input name mapes to different propertis then
+`inputs: ['name: shortName', 'age: oldAge']`
+where componetn properties name are `name` and `age` but in view we expose `shortName`, `oldAge` respectively 
+`<my-component [shortName]="myName" [oldAge]="myAge"></my-component>`
+
+```javascript
+class MyComponent {
+name: string;
+age: number;
+}
+```
+More generally, inputs strings can have the format 'componentProperty: exposedProperty' .
 
 ## Angular 2 app root directory is app folder (from any where in the app)
 so `foo.ts` means it is in application root directory
