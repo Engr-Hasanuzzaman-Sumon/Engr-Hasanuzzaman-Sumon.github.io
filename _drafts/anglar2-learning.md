@@ -143,3 +143,20 @@ var template = `
 </div>
 `
 ```
+
+## Angular event binding
+- input binding: for passing data to component
+- output binding: for passout data from component
+
+### binding can be two types
+-internal: Used with in component
+-pulic(expose/external): expose to outside of component
+	if we want to expose event outside component then we have to tell it using `outputs: []` setting
+
+
+## conditional css class 
+`[class.selected]="isSelected(myProduct)"`
+if `isSelected(myProduct)` true then add css class `selected` to host component
+
+
+
