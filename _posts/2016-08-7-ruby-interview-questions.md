@@ -66,5 +66,5 @@ s.dynamic_method
  - what is `require` ?
  - what is `load` ?
  - wiht is different between `require` and `load` ?
- - 
-
+ - [hash](http://thirtysixthspan.com/posts/tag/ruby)
+ - [hash memoization](http://www.justinweiss.com/articles/4-simple-memoization-patterns-in-ruby-and-one-gem/)
