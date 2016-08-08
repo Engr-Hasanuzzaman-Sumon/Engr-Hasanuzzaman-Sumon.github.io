@@ -50,7 +50,8 @@ s.dynamic_method
  - what happen if we `include` module in class?
  - how we can use method with in module?
      - ex
-     ``` Module Foo
+     ```ruby 
+       Module Foo
           def name
             'sumon'
           end
@@ -58,8 +59,12 @@ s.dynamic_method
           def call_name
             name
           end
-        dne
+        end
      ```
  - what happen if instance extend module?
        `Foo.new.extend(Module)`
+ - what is `require` ?
+ - what is `load` ?
+ - wiht is different between `require` and `load` ?
+ - 
 
