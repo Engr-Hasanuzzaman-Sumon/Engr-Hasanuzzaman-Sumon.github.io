@@ -22,4 +22,9 @@ end
 
 We will pass test value through `expect()` method, then chains a matcher to it:
 N.b: We can use either `to` or `not_to` with  `expect()` method
+We can use `receive_message_chain` for chaining method call
+ex: `allow(company).to receive_message_chain(:projectc, :shares, :find).with(id: 1).and_return(foo)`
+
+for `company.projects.shares.find(id: 1)`
+
 

@@ -82,3 +82,7 @@ self.
 method of self. 
 
 6. Ruby example intrview question with answer   https://github.com/gregstallings/ruby-trivia
+
+7. Two example ways to call a class method in ruby (Lete we havae a class Foo and bar class method)
+    1 Foo::bar
+    2 Foo.bar
