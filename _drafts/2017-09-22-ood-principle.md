@@ -59,6 +59,13 @@ should be rim , the second, tire .
 N.B: A day will come when it’s easier to rewrite everything than to change anything.
 - 4 Other Dependencies
 
+4. Writing Loosely Coupled Code
+-- Inject Dependencies: Instead of creating dependency with in class pass it through parameter
+-- Isolate Dependencies: If it's not possible to separate dependency Isolate them ( create sub class or move to separate method)
+-- Remove Argument-Order Dependencies: Argument order is another dependency. We can make parameter order 
+flexible using hash instead of comma separated parameters. We can set default value using eight Hash.fetch / createing
+default hash and default_params.merge(params){ only passing params will update prams value}
+
 
 
 
