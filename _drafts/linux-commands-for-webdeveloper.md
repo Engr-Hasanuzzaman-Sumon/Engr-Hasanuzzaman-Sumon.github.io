@@ -9,6 +9,7 @@ subcategory: intermediate
 # Close hanged Rubymine
 ## Find Rubymine process id
   ps -aux | grep Rubymine
+  
 ## Kill rubymine process
   `sudo kill -9 found_id`
 ## If port 3000 still show used then use below command to close that
