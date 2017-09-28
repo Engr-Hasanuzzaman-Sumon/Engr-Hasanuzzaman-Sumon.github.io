@@ -8,6 +8,8 @@
 # Web Server
 [Web server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server)
 
+# Proxy server
+[Proxy server](https://www.digitalcitizen.life/simple-questions-what-proxy-server-why-would-you-use-one)
 # Application Server
 
 # Load balancing
