@@ -39,5 +39,11 @@ Unlike in ActiveRecord, models declare their properties inline. We'll start with
 Now run migration for this model using 
     rake cequel:migrate
 
-# *************** DOES NOT WORK 
+# *************** DOES NOT WORK (ACTIVE RECORD METHODS)
 - count
+
+
+# -------------- DATABASE DESIGN IN 
+## Cassandra Data Model Rules
+- Maximize the number of writes
+
