@@ -24,3 +24,8 @@ subcategory: Intermediate
 ## Cassandra Data Model Rules
 - Maximize the number of writes
 
+# Application design in cassandra
+- In Cassandra you don’t start with the data model; you start with the query
+  model. ( what kind of query you will perform on data)
+-   
+
