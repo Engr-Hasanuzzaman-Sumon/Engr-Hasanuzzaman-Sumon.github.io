@@ -10,9 +10,15 @@ It is very lightweight, fast and easy to use. Using this tool we can make differ
 
 In this post, I am going to show some features of *Postman* that I am using in my everday life.
 
-1. Collection
+1. **Collection:**
   we can create Postman's collection that will contain all the related apis under one folder. 
   For every projct I create new collection.
+  
+2. **Folder:**
+
+3. **Share Collection:**
+
+4. **Update Variable data from Response value*:*
 
 postman-main
 
