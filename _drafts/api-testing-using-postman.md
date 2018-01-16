@@ -8,12 +8,11 @@ All most every web developer or web tester are familiar with [Postman](https://w
 Postman is a Chrome add-on and Mac application which is used to fire requests to an API.
 It is very lightweight, fast and easy to use. Using this tool we can make different kinds of HTTP requests – GET, POST, PUT, PATCH and DELETE.
 
-In this post, I am going to show some some advance features of *Postman* that will make api testing easier and fun.
-
-Lets say we are going to test [Github api](https://api.github.com)
+In this post, I am going to show some features of *Postman* that I am using in my everday life.
 
 1. Collection
-  we can create Postman's collection that will contain all of our test
+  we can create Postman's collection that will contain all the related apis under one folder. 
+  For every projct I create new collection.
 
 postman-main
 
