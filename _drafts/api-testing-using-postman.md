@@ -11,8 +11,25 @@ It is very lightweight, fast and easy to use. Using this tool we can make differ
 In this post, I am going to show some features of *Postman* that I am using in my everday life.
 
 1. **Collection:**
-  we can create Postman's collection that will contain all the related apis under one folder. 
+  A Postman Collection lets you group individual requests together. You can organize these requests in folders.
   For every projct I create new collection.
+  
+  You can create a new collection from the:
+
+  - Sidebar
+  - New button
+  
+  **Sidebar**
+
+  In the sidebar, select “*Collections*” and click the “*Collections*” icon.
+  [new collection from sidebar](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/collections_icon1.png)
+  CREATE A NEW COLLECTION modal will appear than fill the require information.
+  [create collection modal](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/collections-    createcollectionmodal.png)
+  
+  **New button**
+  In the header toolbar, click the New button.
+  [New button](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/HeaderToolBar.png)
+  The Create New tab appears than select *Collection* and fill require information.
   
 2. **Folder:**
 
@@ -22,7 +39,7 @@ In this post, I am going to show some features of *Postman* that I am using in m
 
 postman-main
 
-Variables
+Variables 
 There are two types of variables – global and environment. Global variables are for all requests, environment variables are defined per specific environment which can selected from a drop-down or no environment can be selected. Environments will be discussed in details later in current port. Global variables are editable by small eye-shaped icon in the top right corner. Once defined variables can be used in request with format surrounded by curly brackets: {{VARIABLE_NAME}}.
 
 postman-globals
